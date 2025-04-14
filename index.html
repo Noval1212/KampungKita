@@ -5,14 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KampungKita.id</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
-    header { background-color: #007f5f; color: white; padding: 20px; text-align: center; }
-    nav { background-color: #004b3a; padding: 10px; text-align: center; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    .hero { background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994'); background-size: cover; color: white; padding: 100px 20px; text-align: center; }
-    .section { padding: 50px 20px; background: white; margin-bottom: 20px; }
-    .section:nth-child(even) { background: #e0f2f1; }
-    .footer { background: #004b3a; color: white; text-align: center; padding: 20px; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f5f5f5;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(45deg, #007f5f, #00b894);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      font-style: italic;
+    }
+    nav {
+      background-color: #004b3a;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: bold;
+      font-size: 1.05em;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      color: #a2f5c4;
+      text-shadow: 0 0 10px rgba(162, 245, 196, 0.7);
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1568605114967-8130f3a36994');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.4em;
+      font-style: italic;
+    }
+    .section {
+      padding: 70px 25px;
+      background: white;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in-out;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .section:nth-child(even) {
+      background: #e0f2f1;
+    }
+    .section h2 {
+      text-align: center;
+      color: #007f5f;
+      margin-bottom: 20px;
+    }
+    .section p, .section ul {
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+    .footer {
+      background: #004b3a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95em;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    form button {
+      background-color: #007f5f;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1em;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background-color: #005f47;
+    }
+    .mockup {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .mockup img {
+      max-width: 90%;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+    .mockup img:hover {
+      transform: scale(1.02);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -35,33 +161,50 @@
 
   <section class="section" id="about">
     <h2>Tentang Kami</h2>
-    <p>KampungKita.id adalah startup kreatif yang fokus membantu desa dan kampung di Indonesia mengembangkan citra dan identitas visualnya secara profesional dan digital. Kami percaya bahwa potensi lokal bisa bersinar lebih terang dengan branding yang tepat.</p>
+    <p><strong>KampungKita.id</strong> adalah startup kreatif yang berfokus pada transformasi desa-desa di Indonesia melalui branding dan digitalisasi potensi lokal. Kami hadir sebagai jembatan antara kearifan lokal dan kemajuan teknologi, agar setiap desa memiliki identitas visual yang kuat, menarik investor, dan meningkatkan daya saing produk unggulan mereka di pasar yang lebih luas.</p>
   </section>
 
   <section class="section" id="services">
     <h2>Layanan Kami</h2>
     <ul>
-      <li>Branding dan Desain Identitas Desa</li>
-      <li>Pembuatan Website Profil Desa</li>
-      <li>Digitalisasi Potensi Produk Lokal</li>
-      <li>Konten Storytelling (Video & Artikel)</li>
+      <li><strong>Branding dan Desain Identitas Desa</strong>: Logo, tagline, dan elemen visual yang mencerminkan karakter unik setiap desa.</li>
+      <li><strong>Pembuatan Website Profil Desa</strong>: Website profesional yang menampilkan potensi, berita, dan layanan desa.</li>
+      <li><strong>Digitalisasi Produk Lokal</strong>: Strategi pemasaran online untuk produk UMKM desa, termasuk katalog digital dan media sosial.</li>
+      <li><strong>Konten Storytelling</strong>: Video dokumenter, artikel, dan foto yang menggambarkan kehidupan, budaya, dan kekuatan lokal desa.</li>
     </ul>
   </section>
 
   <section class="section" id="portfolio">
     <h2>Portofolio</h2>
-    <p>Beberapa desa yang telah kami bantu dalam pengembangan branding dan digitalisasi akan ditampilkan di sini. (Mockup bisa disiapkan jika diinginkan)</p>
+    <ul>
+      <center><strong>JADILAH DESA PERTAMA YANG MENJADI CONTOH UNTUK DESA-DESA LAINNYA</strong></center>
+    
+    </ul>
   </section>
 
   <section class="section" id="contact">
     <h2>Kontak Kami</h2>
-    <p>Email: novalmahesaputra12@gmail.com</p>
-    <p>WhatsApp: +62 857-1450-4608</p>
-    <p>Instagram: @novalmahesaputra_</p>
+    <p>Ingin desa Anda tampil profesional dan dikenal lebih luas? Hubungi kami sekarang!</p>
+    <form action="https://formspree.io/f/mwkglgzo" method="POST">
+      <label for="name">Nama</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Pesan</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
+    <p>Email: <a href="mailto:novalmahesaputra12@gmail.com">novalmahesaputra12@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/6285714504608">+62 857-1450-4608 (Noval Mahesa Putra)</a></p>
+    <p>Instagram: <a href="https://instagram.com/novalmahesaputra_" target="_blank">@novalmahesaputra_</a></p>
+    <p><a href="https://kampungkita.id/form-pendaftaran" target="_blank">Form Pendaftaran</a></p>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 KampungKita.id. All rights reserved.</p>
+    <p>&copy; 2025 KampungKita.id. Seluruh hak cipta dilindungi undang-undang.</p>
   </footer>
 </body>
 </html>
